@@ -19,12 +19,12 @@ const app = express();
 dotenv.config();
 // app.set("trust proxy",1)
 app.use(express.json())
-app.use(cors({
-  origin:"https://classify-ruddy.vercel.app/",
+//app.use(cors({
+//  origin:"https://classify-ruddy.vercel.app/",
   // origin:"http://localhost:3000",
-  credentials:true,
-}))
-// app.use(cors());
+ // credentials:true,
+//}))
+ app.use(cors());
 app.use(helmet({
   crossOriginResourcePolicy: false,  //enable to display images on frontend
 }))
